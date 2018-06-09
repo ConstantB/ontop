@@ -1,0 +1,38 @@
+[PrefixDeclaration]
+:               https://ramani.ujuizi.com/thredds/dodsC/Sentinel-3-timeseries-global-lai#
+foo:               http://meraka/moss/exampleBooks.owl#
+owl:            http://www.w3.org/2002/07/owl#
+rdf:            http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xsd:            http://www.w3.org/2001/XMLSchema#
+rdfs:           http://www.w3.org/2000/01/rdf-schema#
+quest:          http://obda.org/quest#
+strdf:          http://strdf.di.uoa.gr/ontology#
+cd:             http://melodiesproject.eu/CityDistricts/ontology#
+bio:             http://melodiesproject.eu/vista/biotop/ontology#
+bsph:             http://melodiesproject.eu/vista/bsph/ontology#
+ffh:             http://melodiesproject.eu/vista/ffh/ontology#
+nap:             http://melodiesproject.eu/vista/nap/ontology#
+nsg:             http://melodiesproject.eu/vista/nsg/ontology#
+bpa:             http://melodiesproject.eu/vista/bpa/ontology#
+ntp:             http://melodiesproject.eu/vista/ntp/ontology#
+twsg:             http://melodiesproject.eu/vista/twsg/ontology#
+fl:             http://melodiesproject.eu/floodArea/ontology#
+f:             http://melodiesproject.eu/field/ontology#
+geo:            http://www.opengis.net/ont/geosparql#
+ua:                             http://geo.linkedopendata.gr/urban/ontology#
+lgd:                    http://linkedgeodata.org/ontology#
+
+[SourceDeclaration]
+sourceUri       HiveTest
+connectionUrl
+username
+password
+driverClass
+
+[MappingDeclaration] @collection [[
+
+mappingId       hive_test
+target          lgd:{gid}  lgd:hasName {name} . lgd:{gid}  geo:asWKT {ogc} .
+source          select  gid, name, ogc from gag_orc
+
+]]

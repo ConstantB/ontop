@@ -230,6 +230,7 @@
             <version>1.9</version>
             <type>jar</type>
         </dependency>
+		<!--
         <dependency>
 		<groupId>gr.uoa.di.madgik</groupId>
 		<artifactId>madis-jdbc</artifactId>
@@ -237,8 +238,27 @@
 		<scope>system</scope>
 		<systemPath>/home/constant/ontop-spatial-tip/ontop-spatial/quest-sesame/lib/exareme-utils-0.1-SNAPSHOT.jar</systemPath>
 </dependency>
+-->
+		<!-- Hive Dependencies -->
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-exec</artifactId>
+			<version>3.0.0</version> <!-- Info: versions compatibility based on hive server  -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+			<version>3.0.0</version> <!-- Info: versions compatibility based on hive server  -->
+		</dependency>
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>hadoop-common</artifactId>
+			<version>3.0.0</version> <!-- Info: versions compatibility based on hive server  -->
+		</dependency>
+		<!-- Hive Dependencies -->
 
-			</dependencies>
+
+	</dependencies>
 
 	<build>
 		<plugins>
